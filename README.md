@@ -1,3 +1,22 @@
+# Dev Books 📚
+
+¡Bienvenido a **Dev Books**! 🚀  
+Este proyecto está basado en el tutorial de Midudev y construido utilizando **Astro** para mostrar una colección de libros esenciales para desarrolladores.
+
+## 🚀 Tecnologías utilizadas
+
+- **Astro**: Framework moderno para construir sitios web rápidos y optimizados.  
+- **HTML, CSS y JavaScript**: Para estructurar, estilizar e interactividad básica.  
+- **Bootstrap**: Framework CSS para diseño moderno y responsivo.  
+- **Markdown**: Para la creación de contenido dinámico.
+
+## 🛠️ Características
+
+- Listado de libros para desarrolladores con sus respectivos detalles.
+- Diseño minimalista y responsivo.
+- Componentes reutilizables en Astro.
+- Navegación rápida y optimizada para SEO.
+
 # Astro Starter Kit: Basics
 
 ```sh
