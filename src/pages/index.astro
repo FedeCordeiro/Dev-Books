@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
+
+//recuperar la coleccion de libros - asincrono
+const books = await getCollection('books');
+console.log(books)
+---
+<Layout title="Welcome to Astro.">
+  <main class="container mt-2">
+    <h1 class="title text-center mb-4 fw-bold text-warning-emphasis">
+      Dev 💻<span class="d-block text-warning">Books</span>
+    </h1>
+  </main>
+
+  <section class="container">
+    <h2 class="mb-4 text-center">Libros recomendados para Programadores</h2>
+    <div class="row">
+      {books.map(book => {
+        const { slug, data } = book
+        const { title, author, img, readtime, description, buy } = data
+
+        return (
+          <div class="mb-4 w-25 h-50 flex row">
+            <article>
+              <div>
+                <a href={`/book/${slug}`}>
+                  <img src={`../../src/assets/img/${img}`} alt={title} width="240" height="300" class="img-books rounded mb-3" />
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold m-1">{title}</h5>
+                <h6 class="card-subtitle mb-2 text-secondary-emphasis m-1">{author}</h6>
+                <p class="card-text m-1">{description}</p>
+                <p><span class="text-info m-1">⏲️ Lectura en {readtime} minutos</span></p>
+              </div>
+            </article>
+          </div>
+        )
+      })}
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,11 @@
+.img-books {
+    transition: 0.3s;
+}
+
+.img-books:hover {
+    transform:scale(1.1);
+}
+
+.btn { 
+    width: 300px !important;
+}
